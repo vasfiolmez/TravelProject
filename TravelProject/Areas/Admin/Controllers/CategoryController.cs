@@ -14,6 +14,8 @@ namespace TravelProject.Areas.Admin.Controllers
     {
         // GET: Admin/Category
         TravelContext context = new TravelContext();
+
+        [Authorize]
         public ActionResult CategoryList()
         {
             ViewBag.tableAdı = "Kategori Listesi";

@@ -1,0 +1,48 @@
+﻿@model List<TravelProject.Models.Destination>
+@{
+    ViewBag.Title = "DestinationList";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+    int count = 0;
+}
+
+<table class=" table mt-3">
+    <thead>
+
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Ülke</th>
+            <th scope="col">Şehir</th>
+            <th scope="col">Gün/Gece</th>
+            <th scope="col">Fiyat</th>
+
+            <th scope="col">Sil</th>
+            <th scope="col">Güncelle</th>
+            <th scope="col">Sitede Gör</th>
+        </tr>
+
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            count++;
+            <tr>
+                <td>@count</td>
+                <td>@item.Country</td>
+                <td>@item.City</td>
+                <td>@item.DayNight</td>
+                <td>@item.Price</td>
+               
+                <td><a href="/Admin/Destination/DeleteDestination/@item.DestinationId" class="btn btn-danger">Sil</a></td>
+                <td><a href="/Admin/Destination/UpdateDestination/@item.DestinationId" class="btn btn-success">Güncelle</a></td>
+                <td><a href="" class="btn btn-dark">Sitede Gör</a></td>
+
+            </tr>
+        }
+
+    </tbody>
+</table>
+<br />
+<a href="/Admin/Destination/CreateDestination/" class="btn btn-primary">Yeni Kategori Girişi</a>
+
+
