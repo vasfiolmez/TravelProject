@@ -8,8 +8,10 @@
     <br />
     <br />
 
-    <div class="alert alert-warning"> <h3>Yeni Kullanıcı Kayıt Sayfası </h3></div>
+    <div class="alert alert-warning"> <h3> Kullanıcı Giriş Ekranı </h3></div>
     <br />
+
+    <form method="post">
     <label>Kullanıcı Adınız</label>
     @Html.TextBoxFor(x => x.UserName, new { @class = "form-control" })
     <br />
@@ -18,4 +20,6 @@
     @Html.PasswordFor(x => x.Password, new { @class = "form-control" })
     <br />
 
+    <button class="btn btn-primary"> Giriş Yap</button>
+    </form>
 </div>

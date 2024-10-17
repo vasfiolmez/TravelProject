@@ -8,6 +8,7 @@ using TravelProject.Models;
 
 namespace TravelProject.Areas.Admin.Controllers
 {
+    [Authorize]
     public class DestinationController : Controller
     {
         TravelContext context=new TravelContext();
