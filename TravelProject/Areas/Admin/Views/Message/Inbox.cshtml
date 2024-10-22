@@ -1,0 +1,49 @@
+﻿@model List<TravelProject.Models.Message>
+@{
+    ViewBag.Title = "Inbox";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+    int count = 0;
+}
+
+<table class=" table mt-3">
+    <thead>
+
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Gönderici</th>
+            <th scope="col">Konu</th>
+            <th scope="col">Tarih</th>
+
+
+            <th scope="col">Durum</th>
+            <th scope="col">İşlemler</th>
+       
+        </tr>
+
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+            count++;
+            <tr>
+                <td>@count</td>
+                <td>@item.SenderMail</td>
+                <td>@item.Subject</td>
+                <td>@item.SendDate.ToShortDateString()</td>
+                <td>@item.IsRead</td>
+
+
+                <td><a href="@item.MessageId" class="btn btn-success">Güncelle</a>
+                <a href="" class="btn btn-dark">Sitede Gör</a></td>
+
+            </tr>
+        }
+
+    </tbody>
+</table>
+<br />
+<a href="/Admin/Message/SendMessage/" class="btn btn-primary">Yeni Mesaj Gönderin</a>
+
+
+

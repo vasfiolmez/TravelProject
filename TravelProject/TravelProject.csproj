@@ -131,6 +131,7 @@
     <Compile Include="Areas\Admin\Controllers\AdminLayoutController.cs" />
     <Compile Include="Areas\Admin\Controllers\CategoryController.cs" />
     <Compile Include="Areas\Admin\Controllers\DestinationController.cs" />
+    <Compile Include="Areas\Admin\Controllers\MessageController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProfileController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\ErrorPageController.cs" />
@@ -148,11 +149,20 @@
     <Compile Include="Migrations\202410081832440_mig2.designer.cs">
       <DependentUpon>202410081832440_mig2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202410221732330_mig4.cs" />
+    <Compile Include="Migrations\202410221732330_mig4.designer.cs">
+      <DependentUpon>202410221732330_mig4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202410221744520_mig5.cs" />
+    <Compile Include="Migrations\202410221744520_mig5.designer.cs">
+      <DependentUpon>202410221744520_mig5.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\Category.cs" />
     <Compile Include="Models\Contact.cs" />
     <Compile Include="Models\Destination.cs" />
+    <Compile Include="Models\Message.cs" />
     <Compile Include="Models\Reservation.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Context\TravelContext.cs" />
@@ -674,6 +684,9 @@
     <Content Include="webUI\vendor\jquery\jquery.min.js" />
     <Content Include="webUI\vendor\jquery\jquery.slim.js" />
     <Content Include="webUI\vendor\jquery\jquery.slim.min.js" />
+    <Content Include="Areas\Admin\Views\Message\Inbox.cshtml" />
+    <Content Include="Areas\Admin\Views\Message\SendBox.cshtml" />
+    <Content Include="Areas\Admin\Views\Message\SendMessage.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -759,6 +772,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202410081832440_mig2.resx">
       <DependentUpon>202410081832440_mig2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202410221732330_mig4.resx">
+      <DependentUpon>202410221732330_mig4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202410221744520_mig5.resx">
+      <DependentUpon>202410221744520_mig5.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
