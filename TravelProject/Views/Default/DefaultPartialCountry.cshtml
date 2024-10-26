@@ -20,15 +20,15 @@
                                     <div class="row">
                                         <div class="col-lg-4 col-sm-5">
                                             <div class="image">
-                                                <img src="/webUI/assets/images/country-01.jpg" alt="">
+                                                <img src="@item.Image" alt="">
                                             </div>
                                         </div>
                                         <div class="col-lg-8 col-sm-7">
                                             <div class="right-content">
-                                                <h4>@item.Country</h4>
-                                                <span>@item.City</span>
+                                                <h4>@item.City.CityName</h4>
+                                                <span>@item.City.Country.CountryName</span>
                                                 <div class="main-button">
-                                                    <a href="about.html">Tüm Detayları Görün</a>
+                                                    <a href="/About/Index/@item.DestinationId">Tüm Detayları Görün</a>
                                                 </div>
                                                 <p>@item.Description </p>
                                                 <ul class="info">
@@ -41,7 +41,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>                                    
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -71,3 +71,15 @@
         </div>
     </div>
 </div>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Sayfa yüklendiğinde kaydırma pozisyonunu kontrol et
+        if (sessionStorage.scrollPosition) {
+            window.scrollTo(0, sessionStorage.scrollPosition);
+        }
+    });
+
+    window.addEventListener("beforeunload", function () {
+        // Sayfa kapanmadan önce kaydırma pozisyonunu sakla
+        sessionStorage.scrollPosition = window.scrollY;
+    });</script>

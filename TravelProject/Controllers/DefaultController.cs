@@ -13,8 +13,7 @@ namespace TravelProject.Controllers
     {
         TravelContext context = new TravelContext();
         public ActionResult Index()
-        {
-           
+        {          
             return View();
         }
         public PartialViewResult DefaultPartialHead()

@@ -54,10 +54,9 @@ namespace TravelProject.Areas.Admin.Controllers
             ViewBag.tableAdı = "Destinasyon Güncelleme Sayfası";
             var value = context.Destinations.Find(destination.DestinationId);
             value.Description = destination.Description;
-            value.City = destination.City;
-            value.Country = destination.Country;
+            
             value.DayNight = destination.DayNight;
-            value.ImageUrl = destination.ImageUrl;
+            value.SliderImageUrl = destination.SliderImageUrl;
             value.Title = destination.Title;
             value.Price = destination.Price;
 

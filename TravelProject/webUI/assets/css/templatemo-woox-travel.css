@@ -150,9 +150,9 @@ body {
 
 .border-button a {
   font-size: 14px;
-  color: #22b3c1;
-  background-color: transparent;
-  border: 1px solid #22b3c1;
+  color: black;
+  background-color: white;
+  border: 3px solid black;
   padding: 12px 30px;
   display: inline-block;
   border-radius: 25px;
@@ -165,8 +165,8 @@ body {
 }
 
 .border-button a:hover {
-  background-color: #22b3c1;
-  color: #fff;
+  background-color: white;
+  color: black;
 }
 
 .main-button a {
@@ -322,7 +322,7 @@ Header Style
 */
 
 .background-header {
-  background-color: #22b3c1 !important;
+  background-color: black !important;
   height: 70px!important;
   position: fixed!important;
   top: 0!important;
@@ -336,7 +336,7 @@ Header Style
 }
 
 .header-area {
-  background-color: #22b3c1;
+  background-color: black;
   position: absolute;
   height: 70px;
   top: 0;
@@ -613,7 +613,7 @@ Header Style
     width: 100%;
   }
   .header-area {
-    background-color: #22b3c1;
+    background-color: black;
     padding: 0px 15px;
     height: 100px;
     box-shadow: none;
@@ -1047,7 +1047,7 @@ Call To Action Style
 
 .call-to-action {
   margin-top: 120px;
-  background-image: url(../images/cta-bg.jpg);
+  background-color:black;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -1074,13 +1074,13 @@ Call To Action Style
 }
 
 .call-to-action .border-button a {
-  color: #fff;
+  color: black;
   border-color: #fff
 }
 
 .call-to-action .border-button a:hover {
-  background-color: #fff;
-  color: #22b3c1;
+  background-color: white;
+  color: black;
 }
 
 
@@ -1091,7 +1091,7 @@ Footer Style
 */
 
 footer {
-  background-color: #22b3c1;
+  background-color: black;
   text-align: center;
   padding: 25px 0px;
 }
@@ -1121,7 +1121,7 @@ About Page Style
 
 .about-main-content {
   margin-top: 70px;
-  background-image: url(../images/about-content-bg.jpg);
+  
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
@@ -1132,7 +1132,7 @@ About Page Style
 .blur-bg {
 	width: 100%;
   height: 100%;
-  background: url(../images/about-content-bg.jpg) no-repeat center center fixed;
+ 
   background-size: cover;
   filter: blur(8px) brightness(80%);
   position: absolute;

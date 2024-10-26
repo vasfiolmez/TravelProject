@@ -142,29 +142,20 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202410081825184_mig1.cs" />
-    <Compile Include="Migrations\202410081825184_mig1.designer.cs">
-      <DependentUpon>202410081825184_mig1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202410081832440_mig2.cs" />
-    <Compile Include="Migrations\202410081832440_mig2.designer.cs">
-      <DependentUpon>202410081832440_mig2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202410221732330_mig4.cs" />
-    <Compile Include="Migrations\202410221732330_mig4.designer.cs">
-      <DependentUpon>202410221732330_mig4.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202410221744520_mig5.cs" />
-    <Compile Include="Migrations\202410221744520_mig5.designer.cs">
-      <DependentUpon>202410221744520_mig5.cs</DependentUpon>
+    <Compile Include="Migrations\202410261424087_InitialCreate.cs" />
+    <Compile Include="Migrations\202410261424087_InitialCreate.designer.cs">
+      <DependentUpon>202410261424087_InitialCreate.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\Category.cs" />
+    <Compile Include="Models\City.cs" />
     <Compile Include="Models\Contact.cs" />
+    <Compile Include="Models\Country.cs" />
     <Compile Include="Models\Destination.cs" />
     <Compile Include="Models\Message.cs" />
     <Compile Include="Models\Reservation.cs" />
+    <Compile Include="Models\TourCityImage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Context\TravelContext.cs" />
   </ItemGroup>
@@ -666,6 +657,8 @@
     <Content Include="webUI\assets\images\deals-04.jpg" />
     <Content Include="webUI\assets\images\heading-bg-02.jpg" />
     <Content Include="webUI\assets\images\heading-bg.jpg" />
+    <Content Include="webUI\assets\images\istanbul.jpeg" />
+    <Content Include="webUI\assets\images\istanbul.png" />
     <Content Include="webUI\assets\images\logo.png" />
     <Content Include="webUI\assets\images\offers-01.jpg" />
     <Content Include="webUI\assets\images\offers-02.jpg" />
@@ -734,12 +727,20 @@
     <Content Include="webUI\assets\webfonts\fa-v4compatibility.woff2" />
     <Content Include="webUI\vendor\jquery\jquery.min.map" />
     <Content Include="webUI\vendor\jquery\jquery.slim.min.map" />
+    <Content Include="Views\About\Index.cshtml" />
+    <Content Include="Views\About\Banner.cshtml" />
+    <Content Include="Views\About\Head.cshtml" />
+    <Content Include="Views\About\Cities.cshtml" />
+    <Content Include="Views\About\Detail.cshtml" />
+    <Content Include="Views\About\Header.cshtml" />
+    <Content Include="Views\About\Script.cshtml" />
+    <Content Include="Views\About\Footer.cshtml" />
+    <Content Include="Views\About\Reservation.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Areas\Admin\Views\Shared\" />
-    <Folder Include="Views\About\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
@@ -769,17 +770,8 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202410081825184_mig1.resx">
-      <DependentUpon>202410081825184_mig1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202410081832440_mig2.resx">
-      <DependentUpon>202410081832440_mig2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202410221732330_mig4.resx">
-      <DependentUpon>202410221732330_mig4.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202410221744520_mig5.resx">
-      <DependentUpon>202410221744520_mig5.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202410261424087_InitialCreate.resx">
+      <DependentUpon>202410261424087_InitialCreate.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -1,0 +1,37 @@
+﻿@model List<TravelProject.Models.TourCityImage>
+
+
+<div class="cities-town">
+    <div class="container">
+        <div class="row">
+            <div class="slider-content">
+
+                <div class="row">
+                  
+                    <div class="col-lg-12">
+                        
+                            <h2>@ViewBag.cN <em>Turundaki &amp; Rotalarımız</em></h2>
+                    
+                        </div>
+
+                    <div class="col-lg-12">
+                        <div class="owl-cites-town owl-carousel">
+                            @foreach (var item in Model)
+                            {
+                                <div class="item">
+                                    <div class="thumb">
+                                        <img src="@item.CityImage" alt="">
+                                        <h4>@item.CityImageName</h4>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+

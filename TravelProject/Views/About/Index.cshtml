@@ -1,0 +1,42 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+@Html.Action("Head", "About")
+
+<body>
+
+    @Html.Action("Header", "About")
+
+    @Html.Action("Banner", "About")
+
+    @Html.Action("Cities", "About")
+
+    @Html.Action("Detail", "About")
+
+    @Html.Action("Reservation", "About")
+
+    @Html.Action("Footer", "About")
+
+    @Html.Action("Script", "About")
+
+</body>
+
+</html>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Sayfa yüklendiğinde kaydırma pozisyonunu kontrol et
+        if (sessionStorage.scrollPosition) {
+            window.scrollTo(0, sessionStorage.scrollPosition);
+        }
+    });
+
+    window.addEventListener("beforeunload", function () {
+        // Sayfa kapanmadan önce kaydırma pozisyonunu sakla
+        sessionStorage.scrollPosition = window.scrollY;
+    });</script>

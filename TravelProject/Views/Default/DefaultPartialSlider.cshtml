@@ -1,7 +1,6 @@
-﻿
-@model List<TravelProject.Models.Destination>
-    @{
-        int count = 0;
+﻿@model List<TravelProject.Models.Destination>
+@{
+    int count = 0;
 
 }
 <section id="section-1">
@@ -15,11 +14,12 @@
             {
                 count++;
                 <div id="top-banner-@count" class="banner">
-                    <div class="banner-inner-wrapper header-text" style=" background: url('@item.ImageUrl') no-repeat center center; background-size: cover;">
+                    <div class="banner-inner-wrapper header-text" style="background: url('@item.SliderImageUrl') no-repeat center center;
+        background-size: cover;">
                         <div class="main-caption">
                             <h2>@item.Title</h2>
-                            <h1>@item.Country</h1>
-                            <div class="border-button"><a href="about.html"> Go There</a></div>
+                            <h1>@item.SliderDescription</h1>
+                            <div class="border-button "><a href="/About/Index/@item.DestinationId"> <b>Tur Detayları</b></a></div>
                         </div>
                         <div class="container">
                             <div class="row">
@@ -28,11 +28,11 @@
                                         <div class="row">
                                             <div class="col-lg-3 col-sm-6 col-6">
                                                 <i class="fa fa-home"></i>
-                                                <h4><span>Şehir:</span><br>@item.City</h4>
+                                                <h4><span>Tur Süresi :</span><br>@item.DayNight Gün @(item.DayNight-1) Gece</h4>
                                             </div>
                                             <div class="col-lg-3 col-sm-6 col-6">
                                                 <i class="fa fa-globe"></i>
-                                                <h4><span>Fiyatı</span><br>@item.Price</h4>
+                                                <h4><span>Tur Ücreti</span><br>@item.Price</h4>
                                             </div>
                                             <div class="col-lg-3 col-sm-6 col-6">
                                                 <i class="fa fa-user"></i>
@@ -40,7 +40,7 @@
                                             </div>
                                             <div class="col-lg-3 col-sm-6 col-6">
                                                 <div class="main-button">
-                                                    <a href="about.html"> Explore More</a>
+                                                    <a href="/About/Index/@item.DestinationId">Devamını Oku</a>
                                                 </div>
                                             </div>
                                         </div>
@@ -66,18 +66,18 @@
 
 
 @*#section-1 .content-slider .slider #top-banner-1 {
-  background: url('../images/banner-01.jpg') no-repeat center center;
-  background-size: cover;
-}
-#section-1 .content-slider .slider #top-banner-2 {
-  background: url('../images/banner-02.jpg') no-repeat center center;
-  background-size: cover;
-}
-#section-1 .content-slider .slider #top-banner-3 {
-  background: url('../images/banner-03.jpg') no-repeat center center;
-  background-size: cover;
-}
-#section-1 .content-slider .slider #top-banner-4 {
-  background: url('../images/banner-04.jpg') no-repeat center center;
-  background-size: cover;
-}*@
+      background: url('../images/banner-01.jpg') no-repeat center center;
+      background-size: cover;
+    }
+    #section-1 .content-slider .slider #top-banner-2 {
+      background: url('../images/banner-02.jpg') no-repeat center center;
+      background-size: cover;
+    }
+    #section-1 .content-slider .slider #top-banner-3 {
+      background: url('../images/banner-03.jpg') no-repeat center center;
+      background-size: cover;
+    }
+    #section-1 .content-slider .slider #top-banner-4 {
+      background: url('../images/banner-04.jpg') no-repeat center center;
+      background-size: cover;
+    }*@

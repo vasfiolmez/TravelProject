@@ -6,17 +6,17 @@
 <!DOCTYPE html>
 <html lang="en">
 
-     @Html.Action("DefaultPartialHead", "Default")
+@Html.Action("DefaultPartialHead", "Default")
 
 <body>
 
     @Html.Action("DefaultPartialHeader", "Default")
- 
+
     @Html.Action("DefaultPartialSlider", "Default")
 
-    @Html.Action("DefaultPartialCountry","Default")
+    @Html.Action("DefaultPartialCountry", "Default")
 
-    @Html.Action("DefaultPartialReservation","Default")
+    @Html.Action("DefaultPartialReservation", "Default")
 
     @Html.Action("DefaultPartialFooter", "Default")
 
@@ -26,14 +26,3 @@
 
 </html>
 
-<script>document.addEventListener("DOMContentLoaded", function () {
-        // Sayfa yüklendiğinde kaydırma pozisyonunu kontrol et
-        if (sessionStorage.scrollPosition) {
-            window.scrollTo(0, sessionStorage.scrollPosition);
-        }
-    });
-
-    window.addEventListener("beforeunload", function () {
-        // Sayfa kapanmadan önce kaydırma pozisyonunu sakla
-        sessionStorage.scrollPosition = window.scrollY;
-    });</script>
