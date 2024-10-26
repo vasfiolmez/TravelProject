@@ -1,5 +1,5 @@
 /*
-
+    
 TemplateMo 580 Woox Travel
 
 https://templatemo.com/tm-580-woox-travel
@@ -39,7 +39,6 @@ figure, header, nav, section, article, aside, footer, figcaption {
   border: 0;
   outline: 0;
 }
-
 .clearfix:after {
   content: ".";
   display: block;
@@ -817,22 +816,7 @@ Banner Style
   border-color: #22b3c1;
   transition: 0.3s;
 }
-#section-1 .content-slider .slider #top-banner-1 {
-  background: url('../images/banner-01.jpg') no-repeat center center;
-  background-size: cover;
-}
-#section-1 .content-slider .slider #top-banner-2 {
-  background: url('../images/banner-02.jpg') no-repeat center center;
-  background-size: cover;
-}
-#section-1 .content-slider .slider #top-banner-3 {
-  background: url('../images/banner-03.jpg') no-repeat center center;
-  background-size: cover;
-}
-#section-1 .content-slider .slider #top-banner-4 {
-  background: url('../images/banner-04.jpg') no-repeat center center;
-  background-size: cover;
-}
+
 #section-1 .content-slider nav {
   position: absolute;
   bottom: 30px;
@@ -1153,7 +1137,7 @@ About Page Style
   filter: blur(8px) brightness(80%);
   position: absolute;
   left: 0;
-  top: 0;
+  top: 0; 
   z-index: 1;
 }
 

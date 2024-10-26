@@ -25,3 +25,15 @@
 </body>
 
 </html>
+
+<script>document.addEventListener("DOMContentLoaded", function () {
+        // Sayfa yüklendiğinde kaydırma pozisyonunu kontrol et
+        if (sessionStorage.scrollPosition) {
+            window.scrollTo(0, sessionStorage.scrollPosition);
+        }
+    });
+
+    window.addEventListener("beforeunload", function () {
+        // Sayfa kapanmadan önce kaydırma pozisyonunu sakla
+        sessionStorage.scrollPosition = window.scrollY;
+    });</script>
