@@ -1,0 +1,50 @@
+﻿@model List<TravelProject.Models.Destination>
+<div class="amazing-deals">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 offset-lg-3">
+                <div class="section-heading text-center">
+                    <h2>En Çok Tercih Edilen Turlar</h2>
+                    <p>Sana Uygun Tur Rotasını Bul</p>
+                </div>
+            </div>
+            @foreach (var item in Model)
+            {
+
+                <div class="col-lg-6 col-sm-6">
+                    <div class="item">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="image">
+                                    <img src="@item.Image" height="400" alt="">
+                                </div>
+                            </div>
+                            <div class="col-lg-6 align-self-center">
+                                <div class="content">
+                                    <span class="info">*Limited Offssser Today</span>
+                                    <h4>@item.Title</h4>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <i class="fa fa-clock"></i>
+                                            <span class="list">@item.DayNight Gün @(item.DayNight-1) Gece</span>
+                                        </div>
+                                        <div class="col-6">
+                                            <i class="fa fa-map"></i>
+                                            <span class="list">Daily Places</span>
+                                        </div>
+                                    </div>
+                                    <p>@item.Description.Substring(0,100) ....</p>
+                                    <div class="main-button">
+                                        <a href="/About/Index/@item.CityId">Tur Detayı</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    }
+               
+            </div>
+        </div>
+    </div>
+

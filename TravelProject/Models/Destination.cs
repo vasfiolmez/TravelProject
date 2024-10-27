@@ -20,7 +20,12 @@ namespace TravelProject.Models
         public string Image { get; set; }
         public string Description { get; set; }
 
-        public int CityId {  get; set; }
-        public virtual City City { get; set; }    
+        public string TourStartLocationName {  get; set; }
+        public string TourStartMapLocation { get; set; }
+
+        public int CityId { get; set; }
+        public virtual City City { get; set; }
+
+        public ICollection<Reservation> Reservations { get; set; }
     }
 }

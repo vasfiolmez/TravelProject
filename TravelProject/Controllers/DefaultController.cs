@@ -6,6 +6,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.UI;
 using TravelProject.Context;
+using TravelProject.Models;
 
 namespace TravelProject.Controllers
 {
@@ -15,6 +16,15 @@ namespace TravelProject.Controllers
         public ActionResult Index()
         {          
             return View();
+        }
+        [HttpPost]
+        public ActionResult Index(Reservation reservation)
+        {
+            reservation.PersonCount = 1;
+            context.Reservations.Add(reservation);
+            context.SaveChanges();
+            TempData["Success"] = true;
+            return RedirectToAction("Index");
         }
         public PartialViewResult DefaultPartialHead()
         {
@@ -37,8 +47,21 @@ namespace TravelProject.Controllers
             ViewBag.CurrentPage = page;
             return PartialView(values);
         }
-        public PartialViewResult DefaultPartialReservation()
+
+
+    
+        public PartialViewResult DefaultPartialReservation(Destination destination)
         {
+       
+            //destinasyon 
+            List<SelectListItem> destinasyon = (from x in context.Destinations.ToList()
+                                           select new SelectListItem
+                                           {
+                                               Text =x.City.CityName,
+                                               Value = x.DestinationId.ToString()
+
+                                           }).ToList();
+            ViewBag.destinasyon=destinasyon;
             return PartialView();
         }
 

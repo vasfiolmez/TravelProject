@@ -13,5 +13,8 @@ namespace TravelProject.Models
         public int PersonCount { get; set; }
         public DateTime ReservationDate { get; set; }
         public string Description { get; set; }
+
+        public int DestinationId { get; set; }
+        public virtual Destination Destination { get; set; }
     }
 }

@@ -1,0 +1,53 @@
+﻿<div class="page-heading">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h4>Uygun Fiyatlı Rotalarımız</h4>
+                <h2>Keşfetmeye &amp; Hazır Mısın?</h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+@model TravelProject.Models.Destination
+<div class="search-form">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <form id="search-form" name="gs" method="post" role="search">
+                    <div class="row">
+                        <div class="col-lg-2">
+                            <h4>Fırsatları Listele</h4>
+                        </div>
+                        <div class="col-lg-4">
+
+                            <fieldset>
+                                @Html.DropDownListFor(
+                                                  x => x.DestinationId,
+                                                  (List<SelectListItem>)ViewBag.destinasyon,
+                                                  "Tur Ülkesini Seçiniz",
+                                                  new { @class = "form-select", @id = "chooseLocation", @onchange = "this.form.click()" }
+                                              )
+                            </fieldset>
+                        </div>
+                        <div class="col-lg-4">
+                            <fieldset>
+                                @Html.DropDownListFor(
+                                                       x => x.DestinationId,
+                                                       (List<SelectListItem>)ViewBag.destinasyonf,
+                                                       "Fiyat Seçiniz",
+                                                       new { @class = "form-select", @id = "choosePrice", @onchange = "this.form.click()" }
+                                                   )
+                            </fieldset>
+                        </div>
+                        <div class="col-lg-2">
+                            <fieldset>
+                                <button class="border-button">Ara</button>
+                            </fieldset>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+  
