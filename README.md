@@ -1,5 +1,5 @@
 #  TravelProject
-Bu proje My Yazılım Akademi Bünyesinde Murat Yücedağ Eğitmenliği tarafından  Asp.Net MVC Code First kullanarak yapılan 2 .projedir.
+-Bu proje M&Y Yazılım Eğitim Akademi Danışmanlık bünyesinde Murat Yücedağ tarafından verilen eğitimin 2. projesidir.
 
 # Projeye Genel Bakış
 
