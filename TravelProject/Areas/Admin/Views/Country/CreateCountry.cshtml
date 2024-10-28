@@ -1,0 +1,17 @@
+﻿@model TravelProject.Models.Country
+@{
+    ViewBag.Title = "CreateCountry";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+
+<form method="post">
+
+    <label>Ülke Adı</label>
+    @Html.TextBoxFor(x => x.CountryName, new { @class = "form-control" })
+    <br /> 
+    <button class="btn btn-info">Ülkeyi Ekle</button>
+
+</form>
+
+
+

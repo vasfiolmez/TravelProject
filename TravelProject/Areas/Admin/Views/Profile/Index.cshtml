@@ -6,7 +6,8 @@
 
 <form method="post">
 
-    <label>Adınız</label>
+    @Html.HiddenFor(x => x.AdminId)
+    <label>Adı</label>
     @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
     <br />
 
@@ -24,7 +25,23 @@
     <label>Şifreniz</label>
     @Html.PasswordFor(x => x.Password, new { @class = "form-control" })
     <br />
+    <label>Mevcut Görsel</label>
+    <label>
+        <span>@Model.ImageUrl</span>
+    </label>
+    <br />
+    <img style="width: 20%; height: 20%;" src="@Model.ImageUrl" alt="@Model.ImageUrl" class="img-thumbnail">
+    <br />
+
+
+    <div class="form-group ">
+        <div class="custom-file ">
+            <input type="file" class="custom-file" id="customFile" name="ImageUrl"">
+            <label class="custom-file-label" for="customFile">@Model.ImageUrl</label>
+        </div>
+    </div>
 
     <button class="btn btn-primary">Bilgileri Güncelle</button>
 </form>
+
 

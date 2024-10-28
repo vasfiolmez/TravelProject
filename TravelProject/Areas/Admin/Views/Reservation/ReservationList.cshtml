@@ -1,0 +1,90 @@
+﻿@model List< TravelProject.Models.Reservation>
+@{
+    ViewBag.Title = "ReservationList";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+    int count = 0;
+}
+
+<table class="table align-items-center table-flush">
+    <thead class="thead-light">
+        <tr>
+            <th>*</th>
+            <th>Adı</th>
+            <th>Telefon</th>
+            <th>Mail</th>
+            <th>Durum</th>
+            <th>İşlemler</th>
+
+            <th>Detaylar</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            count++;
+            <tr>
+                <td><a href="#">@count</a></td>
+                <td>@item.Name</td>
+                <td>@item.Phone</td>
+                <td>@item.Mail</td>
+                @if (item.ReservationStatus == "Onaylandı")
+                {
+                    <td>
+                        <span class="badge badge-success">@item.ReservationStatus</span>
+                    </td>
+                }
+                @if (item.ReservationStatus == "Rezervasyon Alındı")
+                {
+                    <td>
+                        <span class="badge badge-primary">@item.ReservationStatus</span>
+                    </td>
+                }
+                @if (item.ReservationStatus == "İptal Edildi")
+                {
+                    <td>
+                        <span class="badge badge-danger">@item.ReservationStatus</span>
+                    </td>
+                }
+                @if (item.ReservationStatus == "Beklet")
+                {
+                    <td>
+                        <span class="badge badge-black">@item.ReservationStatus</span>
+                    </td>
+                }
+
+                <td>
+                    <a href="/Admin/Reservation/DeleteReservation/@item.ReservationId" class="btn btn-danger">
+                        <span class="icon text-white-50">
+                            <i class="fas fa-trash"></i>
+                        </span>
+                        <span class="text">İptal </span>
+                    </a>
+
+                    <a href="/Admin/Reservation/ApprovedReservation/@item.ReservationId" class="btn btn-success ">
+                        <span class="icon text-white-50">
+                            <i class="fas fa-check"></i>
+                        </span>
+                        <span class="text">Onayla</span>
+                    </a>
+                    <a href="/Admin/Reservation/WaitReservation/@item.ReservationId" class="btn btn-dark">
+                        <span class="icon text-white-50">
+                            <i class="fas fa-info-circle"></i>
+                        </span>
+                        <span class="text">Beklet</span>
+                    </a>
+                </td>
+                <td>
+                    <a href="/Admin/Reservation/UpdateReservation/@item.ReservationId" class="btn btn-warning btn-icon-split">
+                        <span class="icon text-white-50">
+                            <i class="fas fa-info-circle"></i>
+                        </span>
+                        <span class="text">Detaylar</span>
+                    </a>
+                </td>
+            </tr>
+        }
+
+
+    </tbody>
+</table>
+

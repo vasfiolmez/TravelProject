@@ -1,0 +1,16 @@
+﻿@model TravelProject.Models.Country
+@{
+    ViewBag.Title = "UpdateCountry";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+
+<form method="post">
+    @Html.HiddenFor(x=>x.CountryId)
+
+    <label>Şehir Adı</label>
+    @Html.TextBoxFor(x => x.CountryName, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">Ülke Adını Güncelle</button>
+
+</form>
+

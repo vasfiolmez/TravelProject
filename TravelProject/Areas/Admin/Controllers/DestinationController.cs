@@ -22,6 +22,17 @@ namespace TravelProject.Areas.Admin.Controllers
         public ActionResult CreateDestination()
         {
             ViewBag.tableAdı = "Destinasyon Oluşturma Sayfası";
+
+            List<SelectListItem> city = (from x in context.Cities.Distinct().ToList()
+                                                select new SelectListItem
+                                                {
+                                                    Text = x.CityName,
+                                                    Value = x.CityId.ToString()
+
+                                                }).ToList();
+            ViewBag.city = city;
+
+       
             return View();
         }
         [HttpPost]
@@ -44,6 +55,16 @@ namespace TravelProject.Areas.Admin.Controllers
         public ActionResult UpdateDestination(int id)
         {
             ViewBag.tableAdı = "Destinasyon Güncelleme Sayfası";
+
+          
+            List<SelectListItem> city = (from x in context.Cities.Distinct().ToList()
+                                         select new SelectListItem
+                                         {
+                                             Text = x.CityName,
+                                             Value = x.CityId.ToString()
+
+                                         }).ToList();
+            ViewBag.city = city;
 
             var value =context.Destinations.Find(id);
             return View(value);

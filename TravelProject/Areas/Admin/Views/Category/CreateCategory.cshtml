@@ -1,0 +1,18 @@
+﻿@model TravelProject.Models.Category
+@{
+    ViewBag.Title = "CreateCategory";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+
+<form method="post">
+
+    <label>Kategori Adı</label>
+    @Html.TextBoxFor(x => x.CategoryName, new { @class = "form-control" })
+    <br />
+    <label>Durum</label>
+    @Html.DropDownListFor(model => model.CategoryStatus, new SelectList(new string[] { "True", "False" }), new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">Ekle</button>
+
+</form>
+

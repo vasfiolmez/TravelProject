@@ -1,0 +1,50 @@
+﻿@model List<TravelProject.Models.City>
+@{
+    ViewBag.Title = "CityList";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+    int count = 0;
+}
+
+<table class=" table mt-3">
+    <thead>
+
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Şehir Adı</th>
+            <th scope="col">İşlemler</th>
+
+        </tr>
+
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+
+
+            count++;
+            <tr>
+                <td>@count</td>
+                <td>@item.CityName</td>
+
+                <td>
+                    @if (item.Status == false)
+                    {
+                        <a href="/Admin/City/ChangeCityStatusToTrue/@item.CityId" class="btn btn-outline-info">Aktif yap</a>
+                    }
+                    else
+                    {
+                        <a href="/Admin/City/ChangeCityStatusToFalse/@item.CityId" class="btn btn-outline-dark">Pasif Yap</a>
+                    }
+                   
+                    <a href="/Admin/City/UpdateCity/@item.CityId" class="btn btn-success">Güncelle</a>
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>
+<br />
+<a href="/Admin/City/CreateCity" class="btn btn-primary">Yeni Şehir Girişi</a>
+
+

@@ -30,7 +30,8 @@ namespace TravelProject.Controllers
         }
         public PartialViewResult PartialContact()
         {
-            return PartialView();
+            var values = context.Contacts.FirstOrDefault();
+            return PartialView(values);
         }
     }
 }

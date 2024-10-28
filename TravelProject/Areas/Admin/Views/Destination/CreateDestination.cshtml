@@ -8,12 +8,10 @@
 
 <form method="post">
 
-    <label>Ülke</label>
-    @Html.TextBoxFor(x => x.City.Country.CountryName, new { @class = "form-control" })
-    <br />
+
 
     <label>Şehir</label>
-    @Html.TextBoxFor(x => x.City.CityName, new { @class = "form-control" })
+    @Html.DropDownListFor(x => x.CityId, (List<SelectListItem>)ViewBag.city, new { @class = "form-control" })
     <br />
 
     <label>Tur Başlığı</label>
@@ -30,6 +28,9 @@
     <br />
     <label>Slider Görseli URL</label>
     @Html.TextBoxFor(x => x.SliderImageUrl, new { @class = "form-control" })
+    <br />
+    <label>Slider Açıklama</label>
+    @Html.TextBoxFor(x => x.SliderDescription, new { @class = "form-control" })
     <br />
     <label>Liste Görseli URL</label>
     @Html.TextBoxFor(x => x.Image, new { @class = "form-control" })

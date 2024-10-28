@@ -1,0 +1,42 @@
+﻿@model List<TravelProject.Models.Country>
+@{
+    ViewBag.Title = "CountryList";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+    int count = 0;
+}
+
+<table class=" table mt-3">
+    <thead>
+
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Ülke Adı</th>
+            <th scope="col">Güncelle</th>
+
+        </tr>
+
+    </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+        {
+
+
+            count++;
+            <tr>
+                <td>@count</td>
+                <td>@item.CountryName</td>
+
+                <td>
+                    <a href="/Admin/Country/UpdateCountry/@item.CountryId" class="btn btn-success">Güncelle</a>
+                </td>
+            </tr>
+        }
+
+    </tbody>
+</table>
+<br />
+<a href="/Admin/Country/CreateCountry" class="btn btn-primary">Yeni Tur Ülkesi Ekle</a>
+
+
+

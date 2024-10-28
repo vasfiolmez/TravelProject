@@ -1,0 +1,19 @@
+﻿@model TravelProject.Models.City
+@{
+    ViewBag.Title = "UpdateCity";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+}
+
+<form method="post">
+
+    @Html.HiddenFor(x=>x.CityId)
+    <label>Şehir Adı</label>
+    @Html.TextBoxFor(x => x.CityName, new { @class = "form-control" })
+    <br />
+    <label>Ülkesi</label>
+    @Html.DropDownListFor(x => x.CountryId, (List<SelectListItem>)ViewBag.country, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-info">Güncelle</button>
+
+</form>
+

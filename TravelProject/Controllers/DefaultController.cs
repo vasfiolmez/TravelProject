@@ -22,6 +22,7 @@ namespace TravelProject.Controllers
         {
             reservation.PersonCount = 1;
             context.Reservations.Add(reservation);
+            reservation.ReservationStatus = "Beklet";
             context.SaveChanges();
             TempData["Success"] = true;
             return RedirectToAction("Index");
