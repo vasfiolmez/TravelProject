@@ -20,3 +20,6 @@ Bu proje My Yazılım Akademi Bünyesinde Murat Yücedağ Eğitmenliği tarafın
 - -Authorize (Yetkilendirme)->bir kullanıcının belirli kaynaklara erişim izinlerini kontrol eder.
 - Authentication (Kimlik Doğrulama)->bir kullanıcının kimliğini doğrular ve uygulamaya giriş yapmasını sağlar
 - Session (Oturum)->bir kullanıcının uygulama ile etkileşim kurduğu süre boyunca geçerli olan geçici bir durumdur ve kullanıcının durumunu korur
+
+#Proje UI
+![TravelProjectAnasayfa](https://github.com/user-attachments/assets/6c06982d-1087-47c6-b64b-9d2fd39943c1)
