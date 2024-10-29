@@ -22,7 +22,10 @@
 - Session (Oturum)->bir kullanıcının uygulama ile etkileşim kurduğu süre boyunca geçerli olan geçici bir durumdur ve kullanıcının durumunu korur
 
 #Proje UI
-![TravelProjectAnasayfa](https://github.com/user-attachments/assets/6c06982d-1087-47c6-b64b-9d2fd39943c1)
+-
+![Ekran görüntüsü 2024-10-29 234826](https://github.com/user-attachments/assets/52e700a6-0082-492e-821d-c0c9763ddee4)
+-
+![Ekran görüntüsü 2024-10-29 234855](https://github.com/user-attachments/assets/7c9e8802-7f4f-4d74-98a1-d9fc19352337)
 -
 ![Ekran görüntüsü 2024-10-29 233525](https://github.com/user-attachments/assets/b1fe05cf-e205-4c69-85f9-3c957382d80c)
 -
