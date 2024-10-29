@@ -14,5 +14,8 @@ namespace TravelProject.Models
         public string Surname { get; set; }
         public string Email { get; set; }
         public string ImageUrl { get; set; }
+
+        public ICollection<Message> SentMessages { get; set; }
+        public ICollection<Message> ReceivedMessages { get; set; }
     }
 }

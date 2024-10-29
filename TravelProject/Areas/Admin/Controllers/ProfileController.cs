@@ -25,9 +25,19 @@ namespace TravelProject.Areas.Admin.Controllers
             value.Name = admin.Name;
             value.Surname = admin.Surname;
             value.UserName = admin.UserName;
-            value.Password = admin.Password;
-            value.Email = admin.Email;           
-            value.Password = admin.Password;
+            value.Email = admin.Email; 
+            
+            if(admin.Password!=null)
+            {
+               value.Password= admin.Password;
+            }
+            else
+            {
+                value.Password = null;
+            }
+         
+
+            
             if (admin.ImageUrl != null)
             {
                 value.ImageUrl = "/AdminTeması/assets/img/" + admin.ImageUrl;

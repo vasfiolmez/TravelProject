@@ -23,6 +23,8 @@ namespace TravelProject.Models
         public string TourStartLocationName {  get; set; }
         public string TourStartMapLocation { get; set; }
 
+        public DateTime CreateDate { get; set; }
+
         public int CityId { get; set; }
         public virtual City City { get; set; }
 

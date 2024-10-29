@@ -1,0 +1,66 @@
+﻿﻿@model List<TravelProject.Models.Destination>
+
+@{
+    string GetTimeAgo(DateTime sendDate)
+    {
+        var timeSpan = DateTime.Now - sendDate;
+
+        if (timeSpan.TotalSeconds < 60)
+            return $"{(int)timeSpan.TotalSeconds} saniye önce";
+        if (timeSpan.TotalMinutes < 60)
+            return $"{(int)timeSpan.TotalMinutes} dakika önce";
+        if (timeSpan.TotalHours < 24)
+            return $"{(int)timeSpan.TotalHours} saat önce";
+        if (timeSpan.TotalDays < 30)
+            return $"{(int)timeSpan.TotalDays} gün önce";
+        if (timeSpan.TotalDays < 365)
+            return $"{(int)(timeSpan.TotalDays / 30)} ay önce";
+
+        return $"{(int)(timeSpan.TotalDays / 365)} yıl önce";
+    }
+}
+
+<li class="nav-item topbar-icon dropdown hidden-caret">
+    <a class="nav-link dropdown-toggle"
+       href="#"
+       id="notifDropdown"
+       role="button"
+       data-bs-toggle="dropdown"
+       aria-haspopup="true"
+       aria-expanded="false">
+        <i class="
+fas fa-map-marker-alt"></i>
+    </a>
+    <ul class="dropdown-menu notif-box animated fadeIn"
+        aria-labelledby="notifDropdown">
+        <li>
+            <div class="dropdown-title">
+                Son Eklenen Rotalar
+            </div>
+        </li>
+        <li>
+
+            <div class="notif-scroll scrollbar-outer">
+                <div class="notif-center">
+                    @foreach (var item in Model)
+                    {
+                        <a href="/About/Index/@item.CityId">
+                            <div class="notif-icon notif-primary">
+                                <i class="fas fa-map-marked"></i>
+                            </div>
+                            <div class="notif-content">
+                                <span class="block"> @item.Title </span>
+                                <span class="time">@GetTimeAgo(item.CreateDate)</span>
+                            </div>
+                        </a>
+                    }
+                </div>
+            </div>
+        </li>
+        <li>
+            <a class="see-all" href="/Admin/Destination/DestinationList">
+                Tüm Rotaları Gör <i class="fa fa-angle-right"></i>
+            </a>
+        </li>
+    </ul>
+</li>

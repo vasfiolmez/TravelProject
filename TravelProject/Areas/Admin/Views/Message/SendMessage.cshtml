@@ -7,7 +7,7 @@
 <form method="post">
 
     <label>Alıcı Mail</label>
-    @Html.TextBoxFor(x => x.ReceiverMail, new { @class = "form-control" })
+    @Html.DropDownListFor(x => x.ReceiverAdminId, (List<SelectListItem>)ViewBag.Sendmessage, new { @class = "form-control" })
     <br />
 
     <label>Konu</label>

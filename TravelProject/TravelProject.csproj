@@ -132,6 +132,7 @@
     <Compile Include="Areas\Admin\Controllers\CategoryController.cs" />
     <Compile Include="Areas\Admin\Controllers\CityController.cs" />
     <Compile Include="Areas\Admin\Controllers\CountryController.cs" />
+    <Compile Include="Areas\Admin\Controllers\DashboardController.cs" />
     <Compile Include="Areas\Admin\Controllers\DestinationController.cs" />
     <Compile Include="Areas\Admin\Controllers\MessageController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProfileController.cs" />
@@ -163,6 +164,18 @@
     <Compile Include="Migrations\202410271530329_colDestination.cs" />
     <Compile Include="Migrations\202410271530329_colDestination.designer.cs">
       <DependentUpon>202410271530329_colDestination.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202410291715434_addd.cs" />
+    <Compile Include="Migrations\202410291715434_addd.designer.cs">
+      <DependentUpon>202410291715434_addd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202410291721456_addd2.cs" />
+    <Compile Include="Migrations\202410291721456_addd2.designer.cs">
+      <DependentUpon>202410291721456_addd2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202410291725395_messages.cs" />
+    <Compile Include="Migrations\202410291725395_messages.designer.cs">
+      <DependentUpon>202410291725395_messages.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Admin.cs" />
@@ -709,6 +722,9 @@
     <Content Include="Areas\Admin\Views\City\UpdateCity.cshtml" />
     <Content Include="Areas\Admin\Views\Country\UpdateCountry.cshtml" />
     <Content Include="Areas\Admin\Views\Reservation\ReservationList.cshtml" />
+    <Content Include="Areas\Admin\Views\Dashboard\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\AdminLayout\MessagesNavbar.cshtml" />
+    <Content Include="Areas\Admin\Views\AdminLayout\DestinationNavbar.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -817,6 +833,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202410271530329_colDestination.resx">
       <DependentUpon>202410271530329_colDestination.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202410291715434_addd.resx">
+      <DependentUpon>202410291715434_addd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202410291721456_addd2.resx">
+      <DependentUpon>202410291721456_addd2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202410291725395_messages.resx">
+      <DependentUpon>202410291725395_messages.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

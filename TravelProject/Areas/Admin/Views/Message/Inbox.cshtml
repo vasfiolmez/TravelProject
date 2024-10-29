@@ -5,6 +5,8 @@
     int count = 0;
 }
 
+
+
 <table class=" table mt-3">
     <thead>
 
@@ -17,7 +19,7 @@
 
             <th scope="col">Durum</th>
             <th scope="col">İşlemler</th>
-       
+
         </tr>
 
     </thead>
@@ -28,14 +30,19 @@
             count++;
             <tr>
                 <td>@count</td>
-                <td>@item.SenderMail</td>
+                <td>@item.SenderAdmin.Email</td>
                 <td>@item.Subject</td>
                 <td>@item.SendDate.ToShortDateString()</td>
                 <td>@item.IsRead</td>
 
 
-                <td><a href="@item.MessageId" class="btn btn-success">Güncelle</a>
-                <a href="" class="btn btn-dark">Sitede Gör</a></td>
+                <td>
+                    <a  class="btn btn-danger btn-sm" data-toggle="modal" data-target="#messageModal"
+                            onclick="openMessageModal('@item.Subject', '@item.Content', '@item.SendDate.ToShortDateString()')">
+                        <i class="fas fa-envelope-open-text"></i>
+                        Mesajı Aç
+                    </a>
+                </td>
 
             </tr>
         }
@@ -47,3 +54,36 @@
 
 
 
+
+<script>
+    function openMessageModal(subject, content, date) {
+        document.getElementById("messageModalLabel").textContent = subject;
+        document.getElementById("modalContent").textContent = content;
+        document.getElementById("modalDate").textContent = date;
+        $('#messageModal').modal('show');
+    }
+
+    function closeMessageModal() {
+        $('#messageModal').modal('hide');
+    }
+</script>
+<div class="modal fade" id="messageModal" tabindex="-1" role="dialog" aria-labelledby="messageModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="messageModalLabel">Mesaj Başlığı</h5>
+                <button type="button" class="close" aria-label="Close" onclick="closeMessageModal()">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p><strong>Tarih:</strong> <span id="modalDate"></span></p>
+                <p><strong>İçerik:</strong></p>
+                <p id="modalContent"></p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" onclick="closeMessageModal()">Kapat</button>
+            </div>
+        </div>
+    </div>
+</div>

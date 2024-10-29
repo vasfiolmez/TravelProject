@@ -24,6 +24,14 @@ namespace TravelProject.Controllers
             {
                 FormsAuthentication.SetAuthCookie(values.UserName, false);
                 Session["x"] = values.UserName;
+                Session["id"] = values.AdminId;
+
+                Session["mail"] = values.Email;
+                Session["image"] = values.ImageUrl;
+                Session["name"] = values.Name+" "+values.Surname;
+                
+
+
                 return RedirectToAction("Index", "Profile", new { area = "Admin" });
             }
             else
