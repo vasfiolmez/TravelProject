@@ -23,3 +23,8 @@
 
 #Proje UI
 ![TravelProjectAnasayfa](https://github.com/user-attachments/assets/6c06982d-1087-47c6-b64b-9d2fd39943c1)
+-
+![Ekran görüntüsü 2024-10-29 233525](https://github.com/user-attachments/assets/b1fe05cf-e205-4c69-85f9-3c957382d80c)
+-
+![Ekran görüntüsü 2024-10-29 233553](https://github.com/user-attachments/assets/8ced9475-9a27-4f38-b64e-e0fa2a67e066)
+
