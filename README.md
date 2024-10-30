@@ -39,5 +39,7 @@
 -
 ![Ekran görüntüsü 2024-10-30 000045](https://github.com/user-attachments/assets/6795ba03-f4f1-41f5-870e-fbe6094f4d96)
 
+![Ekran görüntüsü 2024-10-30 081447](https://github.com/user-attachments/assets/6177561c-a449-41dc-9e81-de470e5905de)
+
 
 
