@@ -21,6 +21,9 @@
 - Authentication (Kimlik Doğrulama)->bir kullanıcının kimliğini doğrular ve uygulamaya giriş yapmasını sağlar
 - Session (Oturum)->bir kullanıcının uygulama ile etkileşim kurduğu süre boyunca geçerli olan geçici bir durumdur ve kullanıcının durumunu korur
 
+- db
+![Ekran görüntüsü 2024-10-30 084006](https://github.com/user-attachments/assets/0df38b73-35d9-4c86-9000-510e8c0eed31)
+
 #Proje UI
 -
 ![Ekran görüntüsü 2024-10-29 234826](https://github.com/user-attachments/assets/52e700a6-0082-492e-821d-c0c9763ddee4)
