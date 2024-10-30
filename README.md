@@ -3,25 +3,27 @@
 
 # Projeye Genel Bakış
 
-- Admin Paneli: CRUD işlemlerine sahip olan admin paneli, Adminin Destinasyon Bilgilerini, Rezervasyon İşlemleri, arayüzde görünen sayfaların Rvb. kolayca girebilecekleri ve güncelleyebilecekleri bir ortam sağlar.
-- Kullanıcı Arayüzü: Şık ve duyarlı bir tasarım, ziyaretçilere seyahatleri etkileyici bir şekilde sunuyor ve Rezervayson yapma ve iletişim kısmında mesaj gönderme hizmetleri sağlıyor.
-
+- Admin Paneli: CRUD işlemlerine sahip olan admin paneli, Adminin Destinasyon Bilgilerini, Rezervasyon İşlemlerini, arayüzde görünen sayfaların vb. kolayca girebilecekleri ve güncelleyebilecekleri bir ortam sağlar.
+- Kullanıcı Arayüzü: Şık ve duyarlı bir tasarım, ziyaretçilere seyahatleri etkileyici bir şekilde sunuyor ve kullanıcılara rezervasyon yapma  hizmetleri sağlıyor.
 
 # Kullanılan Teknolojiler ve Uygulamalar
-- ASP.NET MVC (Model-View-Controller) Framework ->: Web uygulamasının temel çerçevesi olarak kullanıldı. 
-- Entity Framework (ORM) 6.0 - >Veritabanı etkileşimi ve ORM (Nesne İlişkilendirme Haritası) için kullanıldı.
-- Code First -> Veritabanı şeması,uygulamaada yazılıp veri tabanı aktarıldı 
-- Microsoft SQL Server (MSSQL) Veritabanı->Veritabanı yönetimi ve depolama için kullanıldı. 
-- HTML-CSS-Bootstrap (Arayüz tasarımı için)  
-- JS  
-- Ajax -(Mesaj gönderimi,Rezervasyon,Abone olma sırasında sayfa yenileme olmadan veri gönderme ve alımı) 
-- LINQ 
-- -Jquery DataTable->HTML tablolarını etkili bir şekilde yönetmek ve görselleştirmek için kullanılan bir jQuery eklentisidir. 
-- -Authorize (Yetkilendirme)->bir kullanıcının belirli kaynaklara erişim izinlerini kontrol eder.
-- Authentication (Kimlik Doğrulama)->bir kullanıcının kimliğini doğrular ve uygulamaya giriş yapmasını sağlar
-- Session (Oturum)->bir kullanıcının uygulama ile etkileşim kurduğu süre boyunca geçerli olan geçici bir durumdur ve kullanıcının durumunu korur
+- ASP.NET MVC
+- Entity Framework
+- Code First
+- Microsoft SQL Server (MSSQL) Veritabanı
+- HTML-CSS-Bootstrap
+- Session
+- Chart JS Grafikleri
+- Javascript
+- LINQ
+- SweetAlert
+- 3D Kredi Kartı Ödeme Animasyonu
+- Login/Logout İşlemleri
+- Modal & Pop-Up
+- Admin Paneli Üzerinden sisteme kayıtlı adminlerin birbirleriyle mesajlamaı
+- Dinamik Veriler Widgets
 
-- db
+#Veri tabanı Diyagramı
 ![Ekran görüntüsü 2024-10-30 084006](https://github.com/user-attachments/assets/0df38b73-35d9-4c86-9000-510e8c0eed31)
 
 #Proje UI
