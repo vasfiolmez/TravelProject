@@ -1,0 +1,216 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/AdminLayout/Index.cshtml";
+    // Verileri JSON formatında tanımlayın
+    var capacityData = Newtonsoft.Json.JsonConvert.SerializeObject(ViewBag.Capacity);
+    var priceData = Newtonsoft.Json.JsonConvert.SerializeObject(ViewBag.Price);
+    var dayNightData = Newtonsoft.Json.JsonConvert.SerializeObject(ViewBag.DayNight);
+    var destinasyonİsmi = Newtonsoft.Json.JsonConvert.SerializeObject(ViewBag.destinasyon);
+}
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Line Chart (Tur Kapasiteleri)</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="chart-container">
+                            <canvas id="lineChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Bar Chart (Tur Fiyatları)</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="chart-container">
+                            <canvas id="barChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Pie Char (Tur Gün Sayısı)</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="chart-container">
+                            <canvas id="pieChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Doughnut Chart (Tur Fiyatlar)</div>
+                    </div>
+                    <div class="card-body">
+                        <div class="chart-container">
+                            <canvas id="doughnutChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+
+
+<!-- Chart JS -->
+<script src="/AdminTeması/assets/js/plugin/chart.js/chart.min.js"></script>
+
+<script>
+    var lineChart = document.getElementById("lineChart").getContext("2d"),
+        barChart = document.getElementById("barChart").getContext("2d"),
+        pieChart = document.getElementById("pieChart").getContext("2d"),
+        doughnutChart = document.getElementById("doughnutChart").getContext("2d");
+
+    // ViewBag'den gelen verileri JavaScript değişkenlerine aktar
+    var capacityData = @Html.Raw(capacityData);
+    var priceData = @Html.Raw(priceData);
+    var dayNightData = @Html.Raw(dayNightData);
+    var dİ=@Html.Raw(destinasyonİsmi);
+
+    // Line Chart
+    var myLineChart = new Chart(lineChart, {
+        type: "line",
+        data: {
+            labels: dİ,
+            datasets: [{
+                label: "Kapasite",
+                borderColor: "#1d7af3",
+                pointBorderColor: "#FFF",
+                pointBackgroundColor: "#1d7af3",
+                pointBorderWidth: 2,
+                pointHoverRadius: 4,
+                pointHoverBorderWidth: 1,
+                pointRadius: 4,
+                backgroundColor: "transparent",
+                fill: true,
+                borderWidth: 2,
+                data: capacityData
+            }],
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            legend: {
+                position: "bottom",
+                labels: {
+                    padding: 10,
+                    fontColor: "#1d7af3",
+                },
+            },
+            tooltips: {
+                bodySpacing: 4,
+                mode: "nearest",
+                intersect: 0,
+                position: "nearest",
+                xPadding: 10,
+                yPadding: 10,
+                caretPadding: 10,
+            },
+            layout: {
+                padding: { left: 15, right: 15, top: 15, bottom: 15 },
+            },
+        },
+    });
+
+    // Bar Chart
+    var myBarChart = new Chart(barChart, {
+        type: "bar",
+        data: {
+            labels: dİ,
+            datasets: [{
+                label: "Fiyatlar",
+                backgroundColor: "rgb(23, 125, 255)",
+                borderColor: "rgb(23, 125, 255)",
+                data: priceData
+            }],
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        beginAtZero: true,
+                    },
+                }],
+            },
+        },
+    });
+
+    // Pie Chart
+    var myPieChart = new Chart(pieChart, {
+        type: "pie",
+        data: {
+            datasets: [{
+                data: dayNightData,
+                backgroundColor: ["#1d7af3", "#f3545d", "#fdaf4b"],
+                borderWidth: 0,
+            }],
+            labels: dİ,
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            legend: {
+                position: "bottom",
+                labels: {
+                    fontColor: "rgb(154, 154, 154)",
+                    fontSize: 11,
+                    usePointStyle: true,
+                    padding: 20,
+                },
+            },
+            pieceLabel: {
+                render: "percentage",
+                fontColor: "white",
+                fontSize: 14,
+            },
+            tooltips: false,
+            layout: {
+                padding: {
+                    left: 20,
+                    right: 20,
+                    top: 20,
+                    bottom: 20,
+                },
+            },
+        },
+    });
+
+    // Doughnut Chart
+    var myDoughnutChart = new Chart(doughnutChart, {
+        type: "doughnut",
+        data: {
+            datasets: [{
+                data: priceData,
+                backgroundColor: ["#f3545d", "#fdaf4b", "#1d7af3"],
+            }],
+            labels: dİ,
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            legend: {
+                position: "bottom",
+            },
+            layout: {
+                padding: {
+                    left: 20,
+                    right: 20,
+                    top: 20,
+                    bottom: 20,
+                },
+            },
+        },
+    });
+</script>

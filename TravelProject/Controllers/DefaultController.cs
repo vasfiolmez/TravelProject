@@ -20,9 +20,9 @@ namespace TravelProject.Controllers
         [HttpPost]
         public ActionResult Index(Reservation reservation)
         {
-            reservation.PersonCount = 1;
-            context.Reservations.Add(reservation);
+            
             reservation.ReservationStatus = "Beklet";
+            context.Reservations.Add(reservation);       
             context.SaveChanges();
             TempData["Success"] = true;
             return RedirectToAction("Index");
@@ -58,7 +58,7 @@ namespace TravelProject.Controllers
             List<SelectListItem> destinasyon = (from x in context.Destinations.ToList()
                                            select new SelectListItem
                                            {
-                                               Text =x.City.CityName,
+                                               Text =x.City.CityName +","+x.City.Country.CountryName,
                                                Value = x.DestinationId.ToString()
 
                                            }).ToList();

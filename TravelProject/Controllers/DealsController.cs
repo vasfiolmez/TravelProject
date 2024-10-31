@@ -18,7 +18,8 @@ namespace TravelProject.Controllers
         [HttpPost]
         public ActionResult Index(Reservation reservation)
         {
-            reservation.PersonCount = 1;
+            
+            reservation.ReservationStatus = "Beklet";
             context.Reservations.Add(reservation);
             context.SaveChanges();
             TempData["Success"] = true;

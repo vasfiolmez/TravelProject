@@ -14,7 +14,7 @@ namespace TravelProject.Areas.Admin.Controllers
         public ActionResult ReservationList()
         {
             ViewBag.tableAdı = "Rezervasyon Listesi";
-            var values = context.Reservations.ToList();
+            var values = context.Reservations.OrderByDescending(x=>x.ReservationId).ToList();
             return View(values);
         }
 
